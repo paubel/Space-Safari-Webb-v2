@@ -7,14 +7,17 @@ body {
 
 h1,
 h2,
-h2 {
+h3,
+h4 {
   font-family: "Kdam Thmor Pro", sans-serif;
+  text-align: center;
 }
 
 .container {
   margin: 0 auto;
   width: 90vw;
   display: grid;
+
   grid-template-columns: 3fr;
   grid-template-areas:
     "h h"
@@ -53,6 +56,33 @@ nav.nav--menu a:hover {
 a {
   color: white;
 }
+
+/*main START*/
+
+.section-const-text img {
+  max-height: 70vh;
+  margin: 0 auto;
+}
+
+.section-objects img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 40vh;
+}
+
+.section-objects figure {
+  margin-bottom: 3vh;
+}
+
+@media (min-width: 800px) {
+  section.section--main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20vw 1vh;
+  }
+}
+
+/*main END*/
 
 /*Sidebar START*/
 /* The sidepanel menu */
