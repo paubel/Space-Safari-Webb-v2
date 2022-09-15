@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Safari - Paul Belfrage</title>
+    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
+    <link rel="stylesheet" href="./styles.css">
+
+</head>
+<!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapse_sidebar -->
+
+<body>
+    <div class="container">
+
+
+        <nav class="nav--const sidepanel" id="mySidepanel">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="Andromeda">Andromeda</a>
+            <a href="Antlia">Antlia</a>
+            <a href="Apus">Apus</a>
+            <a href="Aquarius">Aquarius</a>
+            <a href="Aquila">Aquila</a>
+            <a href="Ara">Ara</a>
+            <a href="Aries">Aries</a>
+            <a href="Auriga">Auriga</a>
+            <a href="Boötes">Boötes</a>
+            <a href="Caelum">Caelum</a>
+            <a href="Camelopardalis">Camelopardalis</a>
+            <a href="Cancer">Cancer</a>
+            <a href="CanesVenatici">CanesVenatici</a>
+            <a href="CanisMajor">CanisMajor</a>
+            <a href="CanisMinor">CanisMinor</a>
+            <a href="Capricornus">Capricornus</a>
+            <a href="Carina">Carina</a>
+            <a href="Cassiopeia">Cassiopeia</a>
+            <a href="Centaurus">Centaurus</a>
+            <a href="Cepheus">Cepheus</a>
+            <a href="Cetus">Cetus</a>
+            <a href="Chamaeleon">Chamaeleon</a>
+            <a href="Circinus">Circinus</a>
+            <a href="Columba">Columba</a>
+            <a href="ComaBerenices">ComaBerenices</a>
+            <a href="CoronaAustralis">CoronaAustralis</a>
+            <a href="CoronaBorealis">CoronaBorealis</a>
+            <a href="Corvus">Corvus</a>
+            <a href="Crater">Crater</a>
+            <a href="Crux">Crux</a>
+            <a href="Cygnus">Cygnus</a>
+            <a href="Delphinus">Delphinus</a>
+            <a href="Dorado">Dorado</a>
+            <a href="Draco">Draco</a>
+            <a href="Equuleus">Equuleus</a>
+            <a href="Eridanus">Eridanus</a>
+            <a href="Fornax">Fornax</a>
+            <a href="Gemini">Gemini</a>
+            <a href="Grus">Grus</a>
+            <a href="Hercules">Hercules</a>
+            <a href="Horologium">Horologium</a>
+            <a href="Hydra">Hydra</a>
+            <a href="Hydrus">Hydrus</a>
+            <a href="Indus">Indus</a>
+            <a href="Lacerta">Lacerta</a>
+            <a href="Leo">Leo</a>
+            <a href="LeoMinor">LeoMinor</a>
+            <a href="Lepus">Lepus</a>
+            <a href="Libra">Libra</a>
+            <a href="Lupus">Lupus</a>
+            <a href="Lynx">Lynx</a>
+            <a href="Lyra">Lyra</a>
+            <a href="Mensa">Mensa</a>
+            <a href="Microscopium">Microscopium</a>
+            <a href="Monoceros">Monoceros</a>
+            <a href="Musca">Musca</a>
+            <a href="Norma">Norma</a>
+            <a href="Octans">Octans</a>
+            <a href="Ophiuchus">Ophiuchus</a>
+            <a href="orion.html">Orion</a>
+            <a href="Pavo">Pavo</a>
+            <a href="Pegasus">Pegasus</a>
+            <a href="Perseus">Perseus</a>
+            <a href="Phoenix">Phoenix</a>
+            <a href="Pictor">Pictor</a>
+            <a href="Pisces">Pisces</a>
+            <a href="PiscisAustrinus">PiscisAustrinus</a>
+            <a href="Puppis">Puppis</a>
+            <a href="Pyxis">Pyxis</a>
+            <a href="Reticulum">Reticulum</a>
+            <a href="Sagitta">Sagitta</a>
+            <a href="Sagittarius">Sagittarius</a>
+            <a href="Scorpius">Scorpius</a>
+            <a href="Sculptor">Sculptor</a>
+            <a href="Scutum">Scutum</a>
+            <a href="Serpens">Serpens</a>
+            <a href="Sextans">Sextans</a>
+            <a href="Taurus">Taurus</a>
+            <a href="Telescopium">Telescopium</a>
+            <a href="Triangulum">Triangulum</a>
+            <a href="TriangulumAustrale">TriangulumAustrale</a>
+            <a href="Tucana">Tucana</a>
+            <a href="UrsaMajor">UrsaMajor</a>
+            <a href="UrsaMinor">UrsaMinor</a>
+            <a href="Vela">Vela</a>
+            <a href="Virgo">Virgo</a>
+            <a href="Volans">Volans</a>
+            <a href="Vulpecula">Vulpecula</a>
+
+        </nav>
+        <main id="main">
+            <header>
+                <h1>Space Safari</h1>
+                <nav class="nav--menu ">
+                    <a class="openbtn" onclick="openNav()">&#9776; Select constellation</a>
+                    <a href="#">Start</a>
+                    <a href="#">Sources</a>
+                    <a href="#">About</a>
+
+                </nav>
+            </header>
+
+            <section class="section--main">
+                <h2>Andromeda</h2>
+                <figure>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Orion_IAU.svg" alt="Orion">
+                    <figcaption>
+                        <a href="https://commons.wikimedia.org/wiki/File:Orion_IAU.svg">IAU and Sky &amp; Telescope
+                            magazine
+                            (Roger Sinnott &amp; Rick Fienberg)</a>, <a
+                            href="https://creativecommons.org/licenses/by/3.0">CC BY
+                            3.0</a>, via Wikimedia Commons
+                    </figcaption>
+                </figure>
+                <article class="article-">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dicta perspiciatis, velit
+                    praesentium temporibus blanditiis omnis ea reiciendis maxime odit necessitatibus harum saepe ut.
+                    Commodi officia dolore omnis repudiandae voluptas.
+                </article>
+                <figure>
+                    <h3>M31 - The Andromeda Galaxy</h3>
+                    <a title="David (Deddy) Dayag, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons"
+                        href="https://commons.wikimedia.org/wiki/File:Andromeda_Galaxy_560mm_FL.jpg"><img width="512"
+                            alt="Andromeda Galaxy 560mm FL"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Andromeda_Galaxy_560mm_FL.jpg/512px-Andromeda_Galaxy_560mm_FL.jpg"></a>
+                    <figcaption><a href="https://commons.wikimedia.org/wiki/File:Andromeda_Galaxy_560mm_FL.jpg">David
+                            (Deddy) Dayag</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA
+                            4.0</a>, via Wikimedia Commons</figcaption>
+                </figure>
+
+                <figure>
+                    <h3>NGC 7662 planetary nebula - The Blue Snowball Nebulas </h3>
+                    <a title="en:NASA, en:STScI, en:WikiSky, Public domain, via Wikimedia Commons"
+                        href="https://commons.wikimedia.org/wiki/File:NGC_7662_Hubble_WikiSky.jpg"><img width="512"
+                            alt="NGC 7662 Hubble WikiSky"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/NGC_7662_Hubble_WikiSky.jpg/512px-NGC_7662_Hubble_WikiSky.jpg"></a>
+                    <figcaption><a href="https://commons.wikimedia.org/wiki/File:NGC_7662_Hubble_WikiSky.jpg">en:NASA,
+                            en:STScI, en:WikiSky</a>, Public domain, via Wikimedia Commons</figcaption>
+                </figure>
+            </section>
+        </main>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
+
+<!-- 
+88 cont pages
+map
+stars
+DSO
+var starts
+exoplanets -->
