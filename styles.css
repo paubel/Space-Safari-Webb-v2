@@ -1,24 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Montserrat&display=swap");
 
+/* HEX CODES:
+#013026
+#014760
+#107e57
+#a1ce3f
+#cbe58e */
+
 :root {
-  --bg-color: hsl(100, 0%, 80%);
-  --primary-color: hsl(60, 100%, 20%);
-  --secondary-color: hsl(60, 100%, 5%);
+  --black: #000000;
+  --green-500: #013026;
+  --green-400: #014760;
+  --green-300: #107e57;
+  --green-200: #a1ce3f;
+  --green-100: #cbe58e;
+  --light-gray: hsl(100, 0%, 80%);
+  --white: #fff;
+  --primary: hsl(60, 10%, 10%);
+  --secondary: hsl(60, 100%, 5%);
   --tertiary-color: hsl(60, 70%, 50%);
+}
+html {
+  font-size: calc(0.7rem + 0.390625vw);
 }
 
 body {
-  background-color: var(--bg-color);
-  color: var(--secondary-color);
+  background-color: var(--black);
+  color: var(--green-100);
   font-family: "Montserrat", sans-serif;
 }
 
 h1,
 h2,
-h3,
-h4 {
+h3 {
   font-family: "Kdam Thmor Pro", sans-serif;
-  color: var(--primary-color);
+  color: var(--green-100);
   text-align: center;
 }
 
@@ -27,7 +43,6 @@ h4 {
   /*   width: 90vw; */
   margin-right: 2vw;
   display: grid;
-
   grid-template-columns: 3fr;
   grid-template-areas:
     "h h"
@@ -38,6 +53,11 @@ header {
   grid-area: h;
   text-align: center;
   margin: 20px;
+  position: sticky;
+  top: 10px;
+  background-color: #000;
+  padding-bottom: 10px;
+  box-shadow: 0px 0px 16px 12px #000000;
 }
 
 main {
@@ -45,61 +65,74 @@ main {
   margin-left: 2vw;
 }
 nav.nav--const {
-  background-color: black;
+  background-color: var(--black);
   grid-area: c;
 }
 
 nav.nav--menu {
-  margin-top: 10px;
+  margin: 40px 40px;
 }
 
 nav.nav--menu a {
   text-decoration: none;
-  background-color: black;
+  background-color: var(--green-200);
   border-radius: 25px;
   padding: 5px 10px;
+  color: var(--green-500);
 }
 
 nav.nav--menu a:hover {
-  background-color: #444;
+  background-color: var(--green-400);
+  color: var(--green-100);
 }
 
 a {
-  color: var(--primary-color);
+  color: var(--green-200);
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--primary-color);
+  color: var(--green-300);
   text-decoration: underline;
-}
-
-nav a {
-  color: var(--tertiary-color);
 }
 
 /*main START*/
 
-.section-const-text img {
-  max-height: 70vh;
+.figure img {
   margin: 0 auto;
-}
-
-.section-objects img {
-  width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   max-height: 40vh;
 }
 
-.section-objects figure {
-  margin-bottom: 3vh;
+.figure figcaption {
+  font-size: 0.6rem;
+}
+
+.figure-const img {
+  max-height: 45vh;
+  background: var(--green-100);
+  border-radius: 25px;
+  padding: 10px;
+  margin-bottom: 5px;
+  box-shadow: 0px 0px 5px 3px #cbe58e;
+}
+
+section.section--main {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: start center;
+  gap: 2vw 2vh;
 }
 
 @media (min-width: 900px) {
   section.section--main {
-    display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20vw 1vh;
+  }
+}
+
+@media (min-width: 1400px) {
+  section.section--main {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -114,7 +147,7 @@ nav a {
   z-index: 1; /* Stay on top */
   top: 0;
   left: 0;
-  background-color: #111; /* Black*/
+  background-color: var(--green-500);
   overflow-x: hidden; /* Disable horizontal scroll */
   /*   margin-top: -20px;
   margin-bottom: 20px; */
@@ -126,15 +159,15 @@ nav a {
 .sidepanel a {
   padding: 2px 8px 2px 32px;
   text-decoration: none;
-  font-size: 16px;
-  color: var(--tertiary-color);
+  font-size: 1rem;
+  /*   color: var(--green-200); */
   display: block;
   transition: 0.3s;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidepanel a:hover {
-  color: var(--primary-color);
+  color: var(--green-300);
 }
 
 /* Position and style the close button (top right corner) */
@@ -151,7 +184,7 @@ nav a {
 .openbtn {
   cursor: pointer;
   background-color: #111;
-  color: white;
+  /*   color: var(--white); */
   padding: 10px 15px;
   border: none;
 }
@@ -168,5 +201,19 @@ nav a {
     position: static; /* Stay in place */
     left: auto;
     top: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  nav.nav--menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  nav.nav--menu a {
+    width: 50%;
+    margin: 0 auto;
+    font-size: 5vw;
   }
 }
